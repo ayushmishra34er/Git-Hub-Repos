@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all .4s ease-in-out;
+        }
+
+        nav {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 50px;
+            align-content: center;
+            background-color: rgba(255, 255, 255, 0.527);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.807);
+
+
+
+
+        }
+
+        nav ul {
+            margin-right: 10px;
+            color: black;
+            height: 100%;
+            font-size: 1.7rem;
+            font-weight: lighter;
+            list-style-type: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-wrap: nowrap;
+            flex: 1 1 auto;
+            /* allow items to shrink */
+            min-width: 0;
+            /* needed for shrinking */
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+
+
+        }
+
+        nav ul li {
+            height: 100%;
+
+            align-content: center;
+            margin: 0px;
+            padding: 5px;
+
+        }
+
+        nav ul li:hover {
+            transition: all 0.2s ease;
+            background-color: rgba(255, 255, 255, 0.066);
+            cursor: pointer;
+            border: none;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.848);
+
+
+
+
+
+
+
+
+        }
+
+
+
+        body {
+            color: white;
+            background-color: #212121;
+            background-image: url(bg-image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 2px;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.38);
+            border-radius: 20px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            margin: 15px;
+            height: 350px;
+            width: 300px;
+            color: rgb(88, 25, 246);
+            background-color: rgba(255, 255, 255, 0.527);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.807);
+            overflow: hidden;
+
+
+        }
+
+        .card:hover {
+            transition: all 0.2s ease;
+            background-color: rgba(255, 255, 255, 0.066);
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.807);
+
+        }
+
+        .card p {
+            color: black;
+            padding: 10px;
+            align-items: baseline;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+        }
+
+
+        img {
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            height: 30%;
+            object-fit: cover;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px;
+
+        }
+
+        .btn {
+
+            margin: 5px;
+            padding: 7px;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: lighter;
+            font-size: large;
+            border: .1px solid white;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.415);
+        }
+
+        .btn:hover {
+            transition: all 0.2s ease;
+            background-color: rgba(255, 255, 255, 0.066);
+            cursor: pointer;
+            transform: scale(1.05);
+            /* POP EFFECT */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.807);
+            /* Optional: adds a floating glow */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <ul class="list">
+            <li class="list-items">Home</li>
+            <li class="list-items">Pricing</li>
+            <li class="list-items">services</li>
+            <li class="list-items">Contact Us</li>
+
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="container">
+            <div class="card" id="card1">
+
+                <img src="card-01-img.jpg" alt="1st image">
+                <div class="btn-container"> <button class="btn" id="btn1">Button 1</button><button class="btn"
+                        id="btn2">Button 2</button>
+                </div>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ipsam ut. Fuga Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Sed nam quos repellat culpa laborum inventore
+                    amet natus corporis optio corrupti id saepe, iure ratione. Magnam illum sit molestiae expedita sint
+                    voluptas autem modi accusamus.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, doloribus debitis porro omnis
+                    quo ab voluptatem tempora illo molestias cumque earum repudiandae nemo facere quibusdam vitae odio,
+                    accusamus tenetur. Dolore aspernatur aut veniam dolores nostrum corporis ut pariatur. Quia quis
+                    temporibus saepe reiciendis perferendis et. Adipisci nisi necessitatibus laudantium ullam quisquam
+                    et deserunt minus, quasi odio ratione aliquid at sit, debitis perferendis reiciendis suscipit
+                    numquam dolore pariatur. Quia error reiciendis vel corporis beatae blanditiis repellat sequi
+                    aspernatur. Optio.
+                    necessitatibus sit,
+                    officia
+                    exercitationem non quae sint commodi qui mollitia perferendis?</p>
+            </div>
+            <div class="card" id="card2">
+                <img src="card-02-img.jpeg" alt="second image">
+                <div class="btn-container"> <button class="btn" id="btn3">Button 1</button><button class="btn"
+                        id="btn4">Button 2</button>
+                </div>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore libero, dolores
+                    repellat
+                    quisquam modi voluptatum consequuntur architecto, rem quia, distinctio commodi nesciunt.</p>
+            </div>
+            <div class="card" id="card3">
+                <img src="card-02-img.jpeg" alt="second image">
+                <div class="btn-container"> <button class="btn" id="btn5">Button 1</button><button class="btn"
+                        id="btn6">Button 2</button>
+                </div>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore libero, dolores
+                    repellat
+                    quisquam modi voluptatum consequuntur architecto, rem quia, distinctio commodi nesciunt.</p>
+            </div>
+            <div class="card" id="card4">
+                <img src="card-02-img.jpeg" alt="second image">
+                <div class="btn-container"> <button class="btn" id="btn7">Button 1</button><button class="btn"
+                        id="btn8">Button 2</button>
+                </div>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore libero, dolores
+                    repellat
+                    quisquam modi voluptatum consequuntur architecto, rem quia, distinctio commodi nesciunt.</p>
+            </div>
+            <div class="card" id="card5">
+                <img src="card-02-img.jpeg" alt="second image">
+                <div class="btn-container"> <button class="btn" id="btn9">Button 1</button><button class="btn"
+                        id="btn10">Button 2</button>
+                </div>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore libero, dolores
+                    repellat
+                    quisquam modi voluptatum consequuntur architecto, rem quia, distinctio commodi nesciunt.</p>
+            </div>
+            <div class="card" id="card6">
+                <img src="card-02-img.jpeg" alt="second image">
+                <div class="btn-container"> <button class="btn" id="btn11">Button 1</button><button class="btn"
+                        id="btn12">Button 2</button>
+                </div>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore libero, dolores
+                    repellat
+                    quisquam modi voluptatum consequuntur architecto, rem quia, distinctio commodi nesciunt.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
